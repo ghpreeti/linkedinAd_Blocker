@@ -1,0 +1,34 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn AdBlocker",
+    "version": "1.0",
+    "description": "Blocks ads on LinkedIn.",
+    "permissions": [
+      "tabs",
+      "webNavigation",
+      "https://www.linkedin.com/*"
+    ],
+    "extension": {
+      "service_worker": "extension.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://www.linkedin.com/*"],
+        "js": ["linkedin.js"]
+      }
+    ],
+    "icons": {
+    "16": "noAdd.png",
+    "48": "noAdd.png",
+    "128": "noAdd.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "noAdd.png",
+      "48": "noAdd.png",
+      "128": "noAdd.png"
+    }
+  }
+  }
+  
